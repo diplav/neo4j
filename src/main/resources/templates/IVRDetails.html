@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="common/menu::head"></head>
+
+<body>
+<nav th:replace="common/menu::menu"></nav>
+
+
+<table>
+    <tr >
+
+    </tr>
+</table>
+
+
+<div class="row" >
+
+<div style="overflow-y: scroll; height: 100%;">
+
+               <table class="table table-bordered table-hovered" style="width: 60%;margin-left: 20%;margin-right: 20%;margin-top: 5%;">
+                   <tr style="background-color: #ff9933; color: white;">
+
+                       <th>From</th>
+                       <th>Direction</th>
+                       <th>Duration(Sec)</th>
+                       <th>Date Created</th>
+                       <th>Start Time</th>
+                       <th>End Time</th>
+                   </tr>
+
+
+                   <tr th:each="call:${calls}">
+
+                       <td th:text="${call.from}"></td>
+                       <td th:text="${call.direction}"></td>
+                       <td th:text="${call.duration}"></td>
+                       <td th:text="${call.dateCreated}"></td>
+                       <td th:text="${call.startTime}"></td>
+                       <td th:text="${call.endTime}"></td>
+
+
+                   </tr>
+               </table>
+</div>
+</div>
+
+
+
+</body>
+
+</html>
+
